@@ -1,6 +1,12 @@
 import config
 from CXRMetric.run_eval import calc_metric
 from CXRMetric.run_eval import CompositeMetric
+from transformers import AutoTokenizer, AutoModel
+
+''''
+CUDA_VISIBLE_DEVICES=6 python test_metric.py
+'''
+
 
 gt_reports = config.GT_REPORTS
 predicted_reports = config.PREDICTED_REPORTS

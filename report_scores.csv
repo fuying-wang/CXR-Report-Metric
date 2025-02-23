@@ -1,0 +1,2 @@
+,index,study_id,report,bleu_score,bertscore,semb_score,radgraph_combined,RadCliQ-v0,RadCliQ-v1
+0,0,1,[Cardiac: Heart Size] The heart size is at the upper limit of normal. [Everything else: Mediastinal] The mediastinal contours are unchanged. [Airway: Hilar Structures] The hilar contours are unchanged. [Breathing: Pleura] There is no pleural effusion or pneumothorax. [Breathing: Lungs] The lungs are clear. [Everything else: Bones] Multilevel degenerative changes are noted in the thoracic spine.,0.16655560081191823,0.20636806,0.09509443,0.0,4.835791805208351,2.0148640913072353

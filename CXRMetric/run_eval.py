@@ -5,6 +5,7 @@ import re
 import pandas as pd
 import pickle
 import torch
+import ipdb
 
 from bert_score import BERTScorer
 from fast_bleu import BLEU
@@ -162,9 +163,9 @@ def calc_metric(gt_csv, pred_csv, out_csv, use_idf): # TODO: support single metr
         os.path.dirname(gt_csv), f"cache_{os.path.basename(gt_csv)}")
     cache_pred_csv = os.path.join(
         os.path.dirname(pred_csv), f"cache_{os.path.basename(pred_csv)}")
-    gt = pd.read_csv(gt_csv)\
+    gt = pd.read_csv(gt_csv, sep="|")\
         .sort_values(by=[STUDY_ID_COL_NAME]).reset_index(drop=True)
-    pred = pd.read_csv(pred_csv)\
+    pred = pd.read_csv(pred_csv, sep="|")\
         .sort_values(by=[STUDY_ID_COL_NAME]).reset_index(drop=True)
 
     # Keep intersection of study IDs

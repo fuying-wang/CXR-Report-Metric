@@ -2,3 +2,7 @@
 *.pt
 *.pyc
 *.swp
+radgraph
+radgraph/
+cache/
+__pycache__/

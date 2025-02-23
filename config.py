@@ -1,6 +1,6 @@
 # Model checkpoints
-CHEXBERT_PATH = "CheXbert/models/chexbert.pth"
-RADGRAPH_PATH = "radgraph/physionet.org/files/radgraph/1.0.0/models/model_checkpoint/model.tar.gz"
+CHEXBERT_PATH = "/home/fywang/Documents/Multi-seq-mae/pretrained/chexbert/chexbert.pth"
+RADGRAPH_PATH = "/data1/r20user2/CXR_dataset/radgraph/1.0.0/models/model_checkpoint"
 
 # Report paths
 GT_REPORTS = "reports/gt_reports.csv"

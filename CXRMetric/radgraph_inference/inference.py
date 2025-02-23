@@ -60,12 +60,14 @@ def run_inference(model_path, cuda):
     out_path = "./temp_dygie_output.json"
     data_path = "./temp_dygie_input.json"
     
-    os.system(f"allennlp predict {model_path} {data_path} \
-            --predictor dygie --include-package dygie \
-            --use-dataset-reader \
-            --output-file {out_path} \
-            --cuda-device {cuda} \
-            --silent")
+    command = f"allennlp predict {model_path} {data_path} \
+                --predictor dygie --include-package dygie \
+                --use-dataset-reader \
+                --output-file {out_path} \
+                --cuda-device {cuda} \
+                --silent"
+    print(command)
+    os.system(command)
 
 def postprocess_reports(data_source, data_split):
     

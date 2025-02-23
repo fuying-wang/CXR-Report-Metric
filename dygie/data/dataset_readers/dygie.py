@@ -199,13 +199,13 @@ class DyGIEReader(DatasetReader):
 
         return Instance(fields)
 
-    @overrides
+    # @overrides
     def _instances_from_cache_file(self, cache_filename):
         with open(cache_filename, "rb") as f:
             for entry in pkl.load(f):
                 yield entry
 
-    @overrides
+    # @overrides
     def _instances_to_cache_file(self, cache_filename, instances):
         with open(cache_filename, "wb") as f:
             pkl.dump(instances, f, protocol=pkl.HIGHEST_PROTOCOL)
